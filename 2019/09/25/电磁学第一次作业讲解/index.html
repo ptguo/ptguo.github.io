@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="1.26Express vector field $\vec G(\rho,\phi,z)=\rho\cos\phi\vec a_\rho+z\vec a_\phi+2\tan\phi\vec a_z$ in Cartesian and spherical systems. 在直角坐标系和球坐标系下表示矢量场 $\vec G(\rho,\phi,z)=\rho\cos\phi\vec a_\rho">
+<meta property="og:type" content="article">
+<meta property="og:title" content="电磁学第一次作业讲解">
+<meta property="og:url" content="https://ptguo.github.io/2019/09/25/电磁学第一次作业讲解/index.html">
+<meta property="og:site_name" content="Guo Putuo">
+<meta property="og:description" content="1.26Express vector field $\vec G(\rho,\phi,z)=\rho\cos\phi\vec a_\rho+z\vec a_\phi+2\tan\phi\vec a_z$ in Cartesian and spherical systems. 在直角坐标系和球坐标系下表示矢量场 $\vec G(\rho,\phi,z)=\rho\cos\phi\vec a_\rho">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-24T16:57:30.950Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="电磁学第一次作业讲解">
+<meta name="twitter:description" content="1.26Express vector field $\vec G(\rho,\phi,z)=\rho\cos\phi\vec a_\rho+z\vec a_\phi+2\tan\phi\vec a_z$ in Cartesian and spherical systems. 在直角坐标系和球坐标系下表示矢量场 $\vec G(\rho,\phi,z)=\rho\cos\phi\vec a_\rho">
+  <link rel="canonical" href="https://ptguo.github.io/2019/09/25/电磁学第一次作业讲解/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>电磁学第一次作业讲解 | Guo Putuo</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Guo Putuo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://ptguo.github.io/2019/09/25/电磁学第一次作业讲解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Guo Putuo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Guo Putuo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">电磁学第一次作业讲解
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-25 00:24:00 / 修改时间：00:57:30" itemprop="dateCreated datePublished" datetime="2019-09-25T00:24:00+08:00">2019-09-25</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/电磁学/" itemprop="url" rel="index"><span itemprop="name">电磁学</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="1-26"><a href="#1-26" class="headerlink" title="1.26"></a>1.26</h1><p>Express vector field $\vec G(\rho,\phi,z)=\rho\cos\phi\vec a_\rho+z\vec a_\phi+2\tan\phi\vec a_z$ in Cartesian and spherical systems.</p>
+<p>在直角坐标系和球坐标系下表示矢量场 $\vec G(\rho,\phi,z)=\rho\cos\phi\vec a_\rho+z\vec a_\phi+2\tan\phi\vec a_z$</p>
+<a id="more"></a>
+
+<h2 id="直角坐标系"><a href="#直角坐标系" class="headerlink" title="直角坐标系"></a>直角坐标系</h2><p>柱坐标系和直角坐标系的关系如下。$\rho,\phi,z$ 到 $x,y,z$ 的关系为，<br>$$<br>x=\rho\cos\phi\\<br>y=\rho\sin\phi\\<br>z=z<br>$$</p>
+<p>从 $x,y,z$ 到 $\rho,\phi,z$ 的关系为，<br>$$<br>\rho=\sqrt{x^2+y^2} \\<br>\tan\phi=\frac{y}{x} \\<br>z=z<br>$$<br>任意矢量可以写作<br>$$<br>\vec r=x\vec a_x+y\vec a_y=\rho\cos\phi\vec a_x+\rho\sin\phi\vec a_y<br>$$<br>$\vec r$的微分$d\vec r$为<br>$$<br>d\vec r=\frac{\partial\vec r}{\partial\rho}d\rho+\frac{\partial\vec r}{\partial\phi}d\phi<br>=(\cos\phi\vec a_x+\sin\phi\vec a_y)d\rho+(-\sin\phi\vec a_x+\cos\phi\vec a_y)\rho d\phi<br>$$<br>因为$\vec a_\rho$为$\vec r$随$\rho$增大（$\phi$不变）方向的单位矢量，所以<br>$$<br>\vec a_\rho=\frac{d\vec r}{d\rho}=\cos\phi\vec a_x+\sin\phi\vec a_y<br>$$<br>$\vec a_\rho$为$\vec r$随$\phi$增大方向的单位矢量，<br>$$<br>\vec a_\phi=\frac{d\vec r}{\rho d\phi}=-\vec a_x\sin\phi+\vec a_y\cos\phi<br>$$</p>
+<p>其中$\rho d\phi$为变化方向的弧长。当然还有，<br>$$<br>\vec a_z=\vec a_z<br>$$<br>坐标变换可以表示为矩阵形式<br>$$<br>\left[<br>\begin{matrix}<br>\vec a_\rho\\ \vec a_\phi\\ \vec a_z\end{matrix}\right]=\left[<br>\begin{matrix}\cos\phi &amp; \sin\phi &amp; 0\\ -\sin\phi &amp; \cos\phi &amp; 0\\ 0 &amp; 0 &amp; 1\end{matrix}\right]\left[\begin{matrix}\vec a_x\\ \vec a_y\\ \vec a_z\end{matrix}\right]<br>$$<br>把上几个式子一并代入$\vec G$就能得到它在指教坐标系下的表示。<br>$$<br>\vec G=\rho\cos\phi(\cos\phi\vec a_x+\sin\phi\vec a_y)+z(-\vec a_x\sin\phi+\vec a_y\cos\phi)+2\tan\phi\vec a_z\\<br>=\vec a_x(\rho\cos^2\phi-z\sin\phi)+\vec a_y(\rho\cos\phi\sin\phi+z\cos\phi)+\frac{2y}{x}\vec a_z<br>$$<br>把正弦余弦函数转化为正切函数后比较方便，<br>$$<br>\cos^2\phi+\sin^2\phi=1\\<br>1+\tan^2\phi=\frac{1}{\cos^2\phi}\\<br>\cos\phi=(1+\tan^2\phi)^{-\frac{1}{2}}\\<br>\sin\phi=(1+\tan^{-2}\phi)^{-\frac{1}{2}}<br>$$<br>代入$\vec G$得到，<br>$$<br>\vec G=\vec a_x(\sqrt{x^2+y^2}(1+\frac{y^2}{x^2})^{-1}-z(1+\frac{x^2}{y^2})^{-\frac{1}{2}})\\<br>+\vec a_y(\sqrt{x^2+y^2}(1+\frac{y^2}{x^2})^{-\frac{1}{2}}(1+\frac{x^2}{y^2})^{-\frac{1}{2}}+z(1+\frac{y^2}{x^2})^{-\frac{1}{2}})\\<br>+\frac{2y}{x}\vec a_z<br>$$<br>整理后得到，<br>$$<br>\vec G(x,y,z)=\frac{x^2-yz}{\sqrt{x^2+y^2}}\vec a_x+\frac{xy+xz}{\sqrt{x^2+y^2}}\vec a_y+\frac{2y}{x}\vec a_z<br>$$</p>
+<h2 id="球坐标系"><a href="#球坐标系" class="headerlink" title="球坐标系"></a>球坐标系</h2><p>球坐标系下<br>$$<br>\rho=r\sin\theta\\<br>\phi=\phi\\<br>z=r\cos\theta<br>$$<br>反之，<br>$$<br>r=\sqrt{\rho^2+z^2}\\<br>\phi=\phi\\<br>\cos\theta=\frac{z}{\sqrt{\rho^2+z^2}}<br>$$<br>微分形式为，<br>$$<br>dr=\frac{\rho d\rho+zdz}{\sqrt{\rho^2+z^2}}\\<br>d\phi=d\phi<br>$$<br>求$d\theta$稍微复杂点，<br>$$<br>d(\cos\theta)=-\sin\theta d\theta=-\frac{\rho d\theta}{\sqrt{\rho^2+z^2}}\\<br>d(\cos\theta)=-z\rho(\rho^2+z^2)^{-\frac{3}{2}}d\rho+(\frac{1}{\sqrt{\rho^2+z^2}}-z^2(\rho^2+z^2)^{-\frac{3}{2}})dz<br>$$</p>
+<p>联立两个式子可以解出<br>$$<br>d\theta=\frac{zd\rho-\rho dz}{\rho^2+z^2}<br>$$<br>其中r为球半径。同理，任意矢量的微分为，<br>$$<br>d\vec r=dr\vec a_r+r\sin\theta d\phi\vec a_\phi+rd\theta\vec a_\theta\\<br>=\frac{\rho d\rho+zdz}{\sqrt{\rho^2+z^2}}\vec a_r+r\sin\theta d\phi\vec a_\phi+r\vec a_\theta(\frac{zd\rho-\rho dz}{\rho^2+z^2})<br>$$</p>
+<p>球坐标系的基矢为，<br>$$<br>\vec a_\rho=\frac{d\vec r}{d\rho}=\frac{\rho}{\sqrt{\rho^2+z^2}}\vec a_r+\vec a_\theta\frac{zr}{\rho^2+z^2}=\sin\theta\vec a_r+\cos\theta\vec a_\theta\\<br>\vec a_\phi=\vec a_\phi\\<br>\vec a_z=\frac{d\vec r}{dz}=\frac{z}{\sqrt{\rho^2+z^2}}\vec a_r- \vec a_\theta\frac{r\rho}{\rho^2+z^2}=\cos\theta\vec a_r-\sin\theta\vec a_\theta<br>$$</p>
+<p>矩阵形式为<br>$$<br>\left[\begin{matrix}\vec a_\rho\\ \vec a_\phi\\ \vec a_z\end{matrix}\right]=\left[\begin{matrix}\sin\theta &amp; \cos\theta &amp; 0\\ 0 &amp; 0 &amp; 1\\ \cos\theta &amp; -\sin\theta &amp; 0\end{matrix}\right]\left[\begin{matrix}\vec a_r\\ \vec a_\theta\\ \vec a_\phi\end{matrix}\right]<br>$$<br>代入G中并整理后得到，<br>$$<br>\vec G(r,\theta,\phi)=(r\sin^2\theta\cos\phi+2\tan\phi\cos\theta)\vec a_r+(r\sin\theta\cos\theta\cos\phi-2\tan\phi\sin\theta)\vec a_\theta\\<br>+r\cos\theta\vec a_\phi<br>$$</p>
+<h1 id="1-28"><a href="#1-28" class="headerlink" title="1.28"></a>1.28</h1><p>Express vector field $\vec D(r,\theta,\phi)=\sin\phi\vec a_r+r\vec a_\theta-3r^2\sin\theta\tan\phi\vec a_\phi$ in Cartesian and cylindrical systems.</p>
+<p>在直角坐标系和柱坐标系中表示矢量场 $\vec D(r,\theta,\phi)=\sin\phi\vec a_r+r\vec a_\theta-3r^2\sin\theta\tan\phi\vec a_\phi$</p>
+<h2 id="直角坐标系-1"><a href="#直角坐标系-1" class="headerlink" title="直角坐标系"></a>直角坐标系</h2><p>$$<br>r=\sqrt{x^2+y^2+z^2}\\<br>\cos\theta=\frac{z}{r}\\<br>\tan\phi=\frac{y}{x}<br>$$</p>
+<p>基变换矩阵为，<br>$$<br>\left[\begin{matrix}\vec a_r\\ \vec a_\theta\\ \vec a_\phi\end{matrix}\right]=\left[\begin{matrix}\sin\theta\cos\phi &amp; \sin\theta\sin\phi &amp; \cos\theta\\ \cos\theta\cos\phi &amp; \cos\theta\sin\phi &amp; -\sin\theta\\ -\sin\phi &amp; \cos\phi &amp; 0\end{matrix}\right]\left[\begin{matrix}\vec a_x\\ \vec a_y\\ \vec a_z\end{matrix}\right]<br>$$<br>代入$\vec D(r,\theta,\phi)$并整理得到，<br>$$<br>\vec D(x,y,z)=\left(\frac{xy}{\sqrt{x^2+y^2}\sqrt{x^2+y^2+z^2}}+\frac{xz}{\sqrt{x^2+y^2}}+\frac{3y^2\sqrt{x^2+y^2+z^2}}{x}\right)\vec a_x\\<br>+\left(\frac{y^2}{\sqrt{x^2+y^2}\sqrt{x^2+y^2+z^2}}+\frac{yz}{\sqrt{x^2+y^2}}-3y\sqrt{x^2+y^2+z^2}\right)\vec a_y\\<br>+\left(\frac{yz}{\sqrt{x^2+y^2}\sqrt{x^2+y^2+z^2}}-\sqrt{x^2+y^2}\right)\vec a_z<br>$$</p>
+<h2 id="柱坐标系"><a href="#柱坐标系" class="headerlink" title="柱坐标系"></a>柱坐标系</h2><p>$$<br>r=\sqrt{\rho^2+z^2}\\<br>\tan\theta=\frac{\rho}{z}\\<br>\phi=\phi<br>$$</p>
+<p>基变换矩阵为，<br>$$<br>\left[\begin{matrix}\vec a_r\\ \vec a_\theta\\ \vec a_\phi\end{matrix}\right]=\left[\begin{matrix}\sin\theta &amp; 0 &amp; \cos\theta\\ \cos\theta &amp; 0 &amp; -\sin\theta\\ 0 &amp; 1 &amp; 0\end{matrix}\right]\left[\begin{matrix}\vec a_\rho\\ \vec a_\phi\\ \vec a_z\end{matrix}\right]<br>$$</p>
+<p>代入$\vec D(r,\theta,\phi)$并整理得到，</p>
+<p>$$<br>\vec D(\rho,\phi,z)=\left(\frac{\rho\sin\theta}{\sqrt{\rho^2+z^2}}+z\right)\vec a_\rho-3\rho\sqrt{\rho^2+z^2}\tan\phi\vec a_\phi+\left(\frac{z\sin\phi}{\sqrt{\rho^2+z^2}}-\rho\right)\vec a_z<br>$$</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/09/08/python简单作图/" rel="next" title="python简单作图">
+                  <i class="fa fa-chevron-left"></i> python简单作图
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc" data-target="post-toc-wrap">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-26"><span class="nav-number">1.</span> <span class="nav-text">1.26</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#直角坐标系"><span class="nav-number">1.1.</span> <span class="nav-text">直角坐标系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#球坐标系"><span class="nav-number">1.2.</span> <span class="nav-text">球坐标系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-28"><span class="nav-number">2.</span> <span class="nav-text">1.28</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#直角坐标系-1"><span class="nav-number">2.1.</span> <span class="nav-text">直角坐标系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#柱坐标系"><span class="nav-number">2.2.</span> <span class="nav-text">柱坐标系</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.JPG"
+      alt="Guo Putuo">
+  <p class="site-author-name" itemprop="name">Guo Putuo</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Guo Putuo</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+<script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+      
+<script type="text/x-mathjax-config">
+    MathJax.Ajax.config.path['mhchem'] = '//cdn.jsdelivr.net/npm/mathjax-mhchem@3';
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        extensions: ['[mhchem]/mhchem.js'],
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -4,7 +4,7 @@
 
 
 
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -47,25 +47,25 @@
     path: '',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
     }
   };
 </script>
 
-  <meta name="description" content="物理意义库仑定律是两个点电荷之间静电相互作用的数学描述，处理点和点之间的静电力非常方便。但是讨论电磁场时，不能只局限于两点之间的描述。相对于点和点之间的局部性质，场的数学描述更侧重于整体性，比如通量和环量。因此，静电场的高斯定理和静电场环量为零与库仑定律等价。它们是同一个物理规律在整体与局部的不同反映。">
+  <meta name="description" content="Coulomb’s law is a mathematical description of the electrostatic interaction between two point charges. It is very convenient to deal with the electrostatic force between points. However, when we talk">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从库仑定律到高斯定理">
-<meta property="og:url" content="https://ptguo.github.io/2019/09/27/从库仑定律到高斯定理/index.html">
+<meta property="og:title" content="From Coulomb&#39;s Law to Gauss&#39; Theorem">
+<meta property="og:url" content="https://ptguo.github.io/2019/09/27/From Coulomb's Law to Gauss' Theorem/index.html">
 <meta property="og:site_name" content="Guo Putuo">
-<meta property="og:description" content="物理意义库仑定律是两个点电荷之间静电相互作用的数学描述，处理点和点之间的静电力非常方便。但是讨论电磁场时，不能只局限于两点之间的描述。相对于点和点之间的局部性质，场的数学描述更侧重于整体性，比如通量和环量。因此，静电场的高斯定理和静电场环量为零与库仑定律等价。它们是同一个物理规律在整体与局部的不同反映。">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-27T13:37:30.771Z">
+<meta property="og:description" content="Coulomb’s law is a mathematical description of the electrostatic interaction between two point charges. It is very convenient to deal with the electrostatic force between points. However, when we talk">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-01-12T16:43:56.660Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从库仑定律到高斯定理">
-<meta name="twitter:description" content="物理意义库仑定律是两个点电荷之间静电相互作用的数学描述，处理点和点之间的静电力非常方便。但是讨论电磁场时，不能只局限于两点之间的描述。相对于点和点之间的局部性质，场的数学描述更侧重于整体性，比如通量和环量。因此，静电场的高斯定理和静电场环量为零与库仑定律等价。它们是同一个物理规律在整体与局部的不同反映。">
-  <link rel="canonical" href="https://ptguo.github.io/2019/09/27/从库仑定律到高斯定理/">
+<meta name="twitter:title" content="From Coulomb&#39;s Law to Gauss&#39; Theorem">
+<meta name="twitter:description" content="Coulomb’s law is a mathematical description of the electrostatic interaction between two point charges. It is very convenient to deal with the electrostatic force between points. However, when we talk">
+  <link rel="canonical" href="https://ptguo.github.io/2019/09/27/From Coulomb's Law to Gauss' Theorem/">
 
 
 <script id="page-configurations">
@@ -79,7 +79,7 @@
   };
 </script>
 
-  <title>从库仑定律到高斯定理 | Guo Putuo</title>
+  <title>From Coulomb's Law to Gauss' Theorem | Guo Putuo</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -116,7 +116,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
   <div class="container use-motion">
     <div class="headband"></div>
 
@@ -134,7 +134,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -154,7 +154,7 @@
       
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
 
   </li>
       
@@ -165,7 +165,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
 
   </li>
       
@@ -176,7 +176,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
 
   </li>
   </ul>
@@ -206,7 +206,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://ptguo.github.io/2019/09/27/从库仑定律到高斯定理/">
+    <link itemprop="mainEntityOfPage" href="https://ptguo.github.io/2019/09/27/From Coulomb's Law to Gauss' Theorem/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Guo Putuo">
@@ -218,7 +218,7 @@
       <meta itemprop="name" content="Guo Putuo">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">从库仑定律到高斯定理
+        <h1 class="post-title" itemprop="name headline">From Coulomb's Law to Gauss' Theorem
 
           
         </h1>
@@ -228,26 +228,34 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              <span class="post-meta-item-text">Posted on</span>
 
               
                 
               
 
-              <time title="创建时间：2019-09-27 20:28:00 / 修改时间：21:37:30" itemprop="dateCreated datePublished" datetime="2019-09-27T20:28:00+08:00">2019-09-27</time>
+              <time title="Created: 2019-09-27 20:28:00" itemprop="dateCreated datePublished" datetime="2019-09-27T20:28:00+08:00">2019-09-27</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-01-13 00:43:56" itemprop="dateModified" datetime="2020-01-13T00:43:56+08:00">2020-01-13</time>
+              </span>
             
           
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/电磁学/" itemprop="url" rel="index"><span itemprop="name">电磁学</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Electromagnetism/" itemprop="url" rel="index"><span itemprop="name">Electromagnetism</span></a></span>
 
                 
                 
@@ -266,13 +274,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="物理意义"><a href="#物理意义" class="headerlink" title="物理意义"></a>物理意义</h1><p>库仑定律是两个点电荷之间静电相互作用的数学描述，处理点和点之间的静电力非常方便。但是讨论电磁场时，不能只局限于两点之间的描述。相对于点和点之间的局部性质，场的数学描述更侧重于整体性，比如通量和环量。因此，静电场的高斯定理和静电场环量为零与库仑定律等价。它们是同一个物理规律在整体与局部的不同反映。<a id="more"></a></p>
+        <p>Coulomb’s law is a mathematical description of the electrostatic interaction between two point charges. It is very convenient to deal with the electrostatic force between points. However, when we talk about electromagnetic fields, we focus more on integrity, such as flux and circulation. This paper deduces Gauss’s theorem and  circuital theorem from Coulomb’s law and elaborates that they are different reflections of the same physical law in the whole and part.<a id="more"></a></p>
 <pre class="mermaid">graph LR;
-  A[库仑定律]--曲面积分-->B[高斯定理]
-  A--曲线积分-->D[静电场环路为0]</pre>
-<h1 id="数学推导"><a href="#数学推导" class="headerlink" title="数学推导"></a>数学推导</h1><p>库伦定律表示点电荷之间的相互作用<br>$$<br>F=\frac{Qq}{4\pi\varepsilon_0 r^2}<br>$$<br>场强则表示为<br>$$<br>\vec E=\frac{q}{4\pi\varepsilon_0 r^2}\vec e_r<br>$$<br>对场强做任意曲面积分，根据数学上的高斯定理，把曲面积分转换为体积分，则得到<br>$$<br>\iint_\Omega \vec E\cdot d\vec S=\iiint\nabla\cdot\vec EdV=\frac{1}{4\pi\varepsilon_0}\iiint\nabla\cdot\frac{\vec e_r}{r^2}dV<br>$$<br>其中，$\Omega$为任意包裹源电荷的曲面。在场论中有，<br>$$<br>\nabla\cdot\frac{\vec e_r}{r^2}=4\pi\delta^3(x,y,z)<br>$$<br>其中$\delta^3(x,y,z)$是三维狄拉克delta函数。根据复变函数中的留数定理，容易计算其任意包含原点的体积分为，<br>$$<br>\iiint\delta^3(x,y,z)dV=1<br>$$<br>因此，对于任意封闭曲面，<br>$$<br>\iint_\Omega \vec E\cdot d\vec S=\frac{q}{\varepsilon_0}<br>$$<br>由场的叠加性，在多个点电荷时，<br>$$<br>\iint_\Omega \vec E\cdot d\vec S=\frac{\sum_i q_i}{\varepsilon_0}<br>$$<br>这就是物理中的高斯定理。</p>
-<h1 id="证明-iiint-nabla-cdot-frac-vec-e-r-r-2-dV-4-pi"><a href="#证明-iiint-nabla-cdot-frac-vec-e-r-r-2-dV-4-pi" class="headerlink" title="证明$\iiint\nabla\cdot\frac{\vec e_r}{r^2}dV=4\pi$"></a>证明$\iiint\nabla\cdot\frac{\vec e_r}{r^2}dV=4\pi$</h1><p>下面简单证明狄拉克delta函数的体积分为1。在球坐标系下，当$r\neq0$时，<br>$$<br>\nabla\cdot\frac{\vec e_r}{r^2}=\frac{1}{r^2\sin\theta}\left(\frac{\partial}{\partial r}r^2\sin\theta\frac{1}{r^2}\right)=0<br>$$<br>当$r=R\to 0$时，作一个包裹原点，半径为$R$的球，对这个球积分，<br>$$<br>\lim_{R\to 0}\iiint_{r\leq R}\nabla\cdot\frac{\vec e_r}{r^2}dV=\lim_{R\to 0}\iint_{r=R}\frac{\vec e_r}{r^2}\cdot d\vec S=\lim_{R\to 0}\frac{1}{R^2}\iint\vec e_r\cdot\vec e_rdS<br>$$<br>$$<br>=\lim_{R\to 0}\frac{1}{R^2}\iint dS=\lim_{R\to 0}\frac{4\pi R^2}{R^2}=4\pi<br>$$<br>所以只要包含$r=0$，这个积分就是$4\pi$。狄拉克delta函数被定义为原点积分为1，其他地方为0的特殊函数。因此，上述散度可以用狄拉克delta函数表示为，<br>$$<br>\nabla\cdot\frac{\vec e_r}{r^2}=4\pi\delta^3(x,y,z)<br>$$</p>
-<h1 id="静电场环量为0"><a href="#静电场环量为0" class="headerlink" title="静电场环量为0"></a>静电场环量为0</h1><p>用同样的方法可以证明静电场的环量为0。<br>$$<br>\oint\vec E\cdot d\vec l=\frac{q}{4\pi\varepsilon_0}\oint\frac{\vec e_r}{r^2}\cdot d\vec l<br>$$<br>根据Stokes定理，可以把曲线积分转换为曲面积分，<br>$$<br>\oint\frac{\vec e_r}{r^2}\cdot d\vec l=\iint\left(\nabla\times\frac{\vec e_r}{r^2}\right)\cdot d\vec S<br>$$<br>在球坐标系下，<br>$$<br>\nabla\times\frac{\vec e_r}{r^2}=\left(\frac{\partial}{\partial r}\vec e_r+\frac{1}{r}\frac{\partial}{\partial\phi}\vec e_\phi+\frac{1}{r\sin\theta}\frac{\partial}{\partial\theta}\vec e_\theta\right)\times\frac{\vec e_r}{r^2}=0<br>$$<br>因此，对任意闭合曲线都有<br>$$<br>\oint\vec E\cdot d\vec l=0<br>$$</p>
+  A[Coulomb's law]--Surface integral-->B[Gauss's theorem]
+  A--Curve integral-->D[circuital theorem]</pre>
+<h1 id="From-Coulomb’s-Law-to-Gauss’-Theorem"><a href="#From-Coulomb’s-Law-to-Gauss’-Theorem" class="headerlink" title="From Coulomb’s Law to Gauss’ Theorem"></a>From Coulomb’s Law to Gauss’ Theorem</h1><p>Coulomb’s Law is written as<br>$$<br>F=\frac{Qq}{4\pi\varepsilon_0 r^2}<br>$$<br>The electric field strength is expressed as<br>$$<br>\vec E=\frac{q}{4\pi\varepsilon_0 r^2}\vec e_r<br>$$<br>Perform arbitrary surface integration on the field strength. According to the mathematical Gauss theorem, convert the surface integration to volume fraction, and get<br>$$<br>\iint_\Omega \vec E\cdot d\vec S=\iiint\nabla\cdot\vec EdV=\frac{1}{4\pi\varepsilon_0}\iiint\nabla\cdot\frac{\vec e_r}{r^2}dV<br>$$<br>, where $\Omega$ is the surface that arbitrarily wraps the source charge. In mathematics,<br>$$<br>\nabla\cdot\frac{\vec e_r}{r^2}=4\pi\delta^3(x,y,z)<br>$$<br>where, $\delta^3(x,y,z)$ is the three-dimensional Dirac delta function. According to the remainder theorem in the complex function, it is easy to calculate the volume<br>$$<br>\iiint\delta^3(x,y,z)dV=1<br>$$<br>. As a result, for any closed surface,<br>$$<br>\iint_\Omega \vec E\cdot d\vec S=\frac{q}{\varepsilon_0}<br>$$<br>. Due to the superposition of the field, when there are multiple point charges,<br>$$<br>\iint_\Omega \vec E\cdot d\vec S=\frac{\sum_i q_i}{\varepsilon_0}<br>$$<br>. This is the Gauss theorem in physics.</p>
+<h1 id="From-Coulomb’s-Law-to-circuital-theorem"><a href="#From-Coulomb’s-Law-to-circuital-theorem" class="headerlink" title="From Coulomb’s Law to circuital theorem"></a>From Coulomb’s Law to circuital theorem</h1><p>In the same way, it can be proved that the ring quantity of the electrostatic field is zero.<br>$$<br>\oint\vec E\cdot d\vec l=\frac{q}{4\pi\varepsilon_0}\oint\frac{\vec e_r}{r^2}\cdot d\vec l<br>$$<br>According to Stokes theorem, the curve integral can be converted into a surface integral.<br>$$<br>\oint\frac{\vec e_r}{r^2}\cdot d\vec l=\iint\left(\nabla\times\frac{\vec e_r}{r^2}\right)\cdot d\vec S<br>$$<br>In a spherical coordinate system,<br>$$<br>\nabla\times\frac{\vec e_r}{r^2}=\left(\frac{\partial}{\partial r}\vec e_r+\frac{1}{r}\frac{\partial}{\partial\phi}\vec e_\phi+\frac{1}{r\sin\theta}\frac{\partial}{\partial\theta}\vec e_\theta\right)\times\frac{\vec e_r}{r^2}=0<br>$$<br>So for any closed curve<br>$$<br>\oint\vec E\cdot d\vec l=0<br>$$</p>
+<h1 id="Why-iiint-nabla-cdot-frac-vec-e-r-r-2-dV-4-pi"><a href="#Why-iiint-nabla-cdot-frac-vec-e-r-r-2-dV-4-pi" class="headerlink" title="Why $\iiint\nabla\cdot\frac{\vec e_r}{r^2}dV=4\pi$ ?"></a>Why $\iiint\nabla\cdot\frac{\vec e_r}{r^2}dV=4\pi$ ?</h1><p>The following briefly proves that the integral of the Dirac delta function is 1. In a spherical coordinate system, when $r\neq0$,<br>$$<br>\nabla\cdot\frac{\vec e_r}{r^2}=\frac{1}{r^2\sin\theta}\left(\frac{\partial}{\partial r}r^2\sin\theta\frac{1}{r^2}\right)=0<br>$$<br>. When $r=R\to 0$, integrate a sphere with a radius of R at O,<br>$$<br>\lim_{R\to 0}\iiint_{r\leq R}\nabla\cdot\frac{\vec e_r}{r^2}dV=\lim_{R\to 0}\iint_{r=R}\frac{\vec e_r}{r^2}\cdot d\vec S=\lim_{R\to 0}\frac{1}{R^2}\iint\vec e_r\cdot\vec e_rdS<br>$$<br>$$<br>=\lim_{R\to 0}\frac{1}{R^2}\iint dS=\lim_{R\to 0}\frac{4\pi R^2}{R^2}=4\pi<br>$$<br>So as long as you include $ r = 0 $, the result is $4\pi$. The Dirac delta function is defined as a special function with O integral of 1 and 0 elsewhere. Therefore, the above divergence can be expressed as a Dirac delta function,<br>$$<br>\nabla\cdot\frac{\vec e_r}{r^2}=4\pi\delta^3(x,y,z)<br>$$</p>
 
     </div>
 
@@ -289,8 +297,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/25/电磁学第一次作业讲解/" rel="next" title="电磁学第一次作业讲解">
-                  <i class="fa fa-chevron-left"></i> 电磁学第一次作业讲解
+                <a href="/2019/09/08/Python simple plotting/" rel="next" title="Python simple plotting">
+                  <i class="fa fa-chevron-left"></i> Python simple plotting
                 </a>
               
             </div>
@@ -337,16 +345,16 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc" data-target="post-toc-wrap">
-          文章目录
+          Table of Contents
         </li>
         <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-          站点概览
+          Overview
         </li>
       </ul>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#物理意义"><span class="nav-number">1.</span> <span class="nav-text">物理意义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数学推导"><span class="nav-number">2.</span> <span class="nav-text">数学推导</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#证明-iiint-nabla-cdot-frac-vec-e-r-r-2-dV-4-pi"><span class="nav-number">3.</span> <span class="nav-text">证明$\iiint\nabla\cdot\frac{\vec e_r}{r^2}dV=4\pi$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#静电场环量为0"><span class="nav-number">4.</span> <span class="nav-text">静电场环量为0</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#From-Coulomb’s-Law-to-Gauss’-Theorem"><span class="nav-number">1.</span> <span class="nav-text">From Coulomb’s Law to Gauss’ Theorem</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#From-Coulomb’s-Law-to-circuital-theorem"><span class="nav-number">2.</span> <span class="nav-text">From Coulomb’s Law to circuital theorem</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Why-iiint-nabla-cdot-frac-vec-e-r-r-2-dV-4-pi"><span class="nav-number">3.</span> <span class="nav-text">Why $\iiint\nabla\cdot\frac{\vec e_r}{r^2}dV=4\pi$ ?</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -364,8 +372,8 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
-          <span class="site-state-item-name">日志</span>
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
     
@@ -386,7 +394,7 @@
           
         
         <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">分类</span>
+        <span class="site-state-item-name">categories</span>
         </a>
       </div>
     
@@ -406,12 +414,15 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Guo Putuo</span>
 </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a></div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a></div>
 
         
 
